@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="ToDo list for the web">
+    <meta name="author" content="Marianna Vladimirova">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <h1 class="text-muted">This is my TODO list</h1>
+    <div style="padding-bottom: 24px;">
+      <button class="btn btn-primary" id="add_task" data-toggle="modal" data-target="#MyModal">
+          Add a new task
+      </button>
+      <div class="modal fade" id="MyModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">New event</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form_holder" role="form">
+              <label for="title">Title</label>
+              <input type="text" name="title">
+              <label for="deadline">Deadline</label>
+              <input type="datetime" name="deadline">
+              <label for="description">Description</label>
+              <input type="big-text" name="description">     
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+      <button class="btn btn-primary" data-toggle="button" type="button">
+          Settings
+      </button>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th> # </th>
+          <th> Title </th>
+          <th> Deadline </th>
+          <th> Description</th>
+        </tr>
+      </thead>
+    </table>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
